@@ -2,6 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import AddEvent from "./Pages/Admin/AddEvent/AddEvent.js";
 import Admin from "./Pages/Admin/Admin/Admin.js";
 import VolunteerList from "./Pages/Admin/VolunteerList/VolunteerList.js";
@@ -12,6 +13,7 @@ import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth.js";
+
 function App() {
   useEffect(() => {
     AOS.init();
@@ -67,6 +69,7 @@ function App() {
         </Route>
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 }
