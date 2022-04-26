@@ -2,9 +2,12 @@ import React from "react";
 import { Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import SocailLogin from "../Shared/SocailLogin/SocailLogin";
+import TitleChange from "../Shared/TitleChange/TitleChange";
 const Login = () => {
   return (
     <Container className="form-control-area">
+      <TitleChange title="Login" />
+
       <div className=" mx-auto form-container">
         <h2 className="text-center">Login Benevolent Network</h2>
         <Form className="form mt-3">

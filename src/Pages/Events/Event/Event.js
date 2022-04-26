@@ -1,10 +1,12 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import eventImg from "../../../Assets/images/clothSwap.png";
+import TitleChange from "../../Shared/TitleChange/TitleChange";
 import "./Event.css";
 const Event = () => {
   return (
     <Col md={4}>
+      <TitleChange title="Event" />
       <div className=" event-container">
         <div className="event-img-container">
           <img className="img-fluid" src={eventImg} alt="" />

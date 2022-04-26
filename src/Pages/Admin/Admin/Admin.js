@@ -2,10 +2,12 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import plusIcon from "../../../Assets/logos/plus 1.png";
 import userIcon from "../../../Assets/logos/users-alt 1.png";
+import TitleChange from "../../Shared/TitleChange/TitleChange";
 import "./Admin.css";
 const Admin = () => {
   return (
     <div className="admin-container flex-column flex-md-row">
+      <TitleChange title="Admin" />
       <div className="sidebar-container">
         <h3> Benevolent Network</h3>
         <div className="icon-container">
