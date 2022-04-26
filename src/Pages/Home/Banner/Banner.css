@@ -1,0 +1,68 @@
+.banner-bg {
+  width: 100vw;
+  height: 60vh;
+  background-image: url("../../../Assets//img/banner-img.jfif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.overly-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 0;
+  left: 0;
+}
+.banner-contnet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-contnet h1 {
+  white-space: nowrap;
+  color: #421fcf;
+}
+.input-group {
+  position: relative;
+  margin-top: 25px;
+  font-size: 17px;
+}
+.input-group input {
+  border: 0;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.616);
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+.submit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: #3f90fc;
+  color: aliceblue;
+  padding: 8px 20px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+@media only screen and (max-width: 576px) {
+  .banner-bg {
+    height: 80vh;
+  }
+  .banner-contnet {
+    margin-top: 20px;
+  }
+  .banner-contnet h1 {
+    white-space: pre-wrap;
+    font-size: 100%;
+  }
+  .input-group {
+    font-size: 100%;
+  }
+}

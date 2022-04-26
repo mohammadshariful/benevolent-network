@@ -1,0 +1,38 @@
+.single-support-container {
+  position: relative;
+  height: 350px;
+}
+.support-img {
+  overflow: hidden;
+  border-radius: 8px;
+}
+.support-img img {
+  transition: 0.3s ease-in-out;
+}
+.support-img:hover img {
+  transform: scale(1.5);
+}
+.content-area {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.content-area h4 {
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+@media only screen and (max-width: 576px) {
+  .single-support-container {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+  }
+  .content-area {
+    bottom: 0;
+  }
+}
