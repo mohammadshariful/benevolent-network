@@ -1,11 +1,12 @@
 .banner-bg {
-  width: 100vw;
+  width: 100%;
   height: 60vh;
   background-image: url("../../../Assets//img/banner-img.jfif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 .overly-bg {
   position: absolute;
@@ -17,6 +18,7 @@
 }
 .banner-contnet {
   position: absolute;
+  width: 70%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -28,7 +30,7 @@
 }
 .input-group {
   position: relative;
-  margin-top: 25px;
+  margin-top: 20px;
   font-size: 17px;
 }
 .input-group input {

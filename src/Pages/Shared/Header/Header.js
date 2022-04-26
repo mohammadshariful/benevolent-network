@@ -10,11 +10,15 @@ const Header = () => {
       expand="lg"
       bg="light"
       variant="light"
-      className="navbar-container"
       sticky="top"
     >
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand
+          as={Link}
+          to="/"
+          style={{ color: "#FF7044" }}
+          className="fw-bold fs-3"
+        >
           Benevolent Network
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
