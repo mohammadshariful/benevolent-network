@@ -26,7 +26,8 @@ const Header = () => {
           <Nav className="ms-auto d-flex justify-content-center align-items-center">
             <CustomLink to="/">Home</CustomLink>
             <CustomLink to="/events">Event</CustomLink>
-            <CustomLink to="/login">Login</CustomLink>
+            <CustomLink to="/login">LogIn</CustomLink>
+            <CustomLink to="/register">SignUp</CustomLink>
             <CustomLink to="/admin">Admin</CustomLink>
           </Nav>
         </Navbar.Collapse>

@@ -1,17 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
+import Loading from "../../Shared/Loading/Loading";
 import SingleSupport from "../SingleSupport/SingleSupport";
 import "./Supports.css";
 const Supports = () => {
-  const arr = [1, 2, 3, 4, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2];
+  const [services, setServices] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    fetch("services.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+      });
+  }, []);
   return (
-    <Container className="supports-container">
-      <Row className="d-flex justify-contnet-center align-items-center">
-        {arr.map((ar) => (
-          <SingleSupport />
-        ))}
-      </Row>
-    </Container>
+    <>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <Container className="supports-container">
+          <Row className="d-flex justify-contnet-center align-items-center">
+            {services.map((service) => (
+              <SingleSupport key={service._id} service={service} />
+            ))}
+          </Row>
+        </Container>
+      )}
+    </>
   );
 };
 

@@ -11,6 +11,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
+import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth.js";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -20,13 +21,49 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Events />} />
+        <Route
+          path="/events"
+          element={
+            <RequireAuth>
+              <Events />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<Admin />}>
-          <Route index element={<AddEvent />} />
-          <Route path="volunteerList" element={<VolunteerList />} />
-          <Route index path="addevent" element={<AddEvent />} />
+        <Route
+          path="/admin"
+          element={
+            <RequireAuth>
+              <Admin />
+            </RequireAuth>
+          }
+        >
+          <Route
+            index
+            element={
+              <RequireAuth>
+                <AddEvent />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="volunteerList"
+            element={
+              <RequireAuth>
+                <VolunteerList />
+              </RequireAuth>
+            }
+          />
+          <Route
+            index
+            path="addevent"
+            element={
+              <RequireAuth>
+                <AddEvent />
+              </RequireAuth>
+            }
+          />
         </Route>
       </Routes>
       <Footer />
