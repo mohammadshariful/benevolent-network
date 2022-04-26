@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import "./SingleSupport.css";
 const SingleSupport = ({ service }) => {
-  const { picture } = service;
+  const { name, picture } = service;
   const colors = ["#FFBD3E", "#FF7044", "#3F90FC", "#421FCF"];
   const reandomColor = Math.floor(Math.random() * colors.length);
 
@@ -16,7 +16,7 @@ const SingleSupport = ({ service }) => {
           style={{ backgroundColor: `${colors[reandomColor]}` }}
           className="content-area"
         >
-          <h4>Child Support</h4>
+          <h4>{name}</h4>
         </div>
       </div>
     </Col>
