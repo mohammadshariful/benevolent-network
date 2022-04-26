@@ -1,0 +1,23 @@
+.form-control-area {
+  margin-top: 20px;
+}
+.form-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
+.form-container h2 {
+  color: #ff7044;
+}
+.form input {
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid gray;
+}
+.btn-submit {
+  border: none;
+  background-color: #3f90fc;
+  padding: 8px 0;
+  border-radius: 4px;
+  color: #fff;
+}
