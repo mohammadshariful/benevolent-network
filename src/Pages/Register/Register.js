@@ -6,7 +6,7 @@ import "./Register.css";
 const Register = () => {
   return (
     <Container className="form-control-area">
-      <div className="w-75 mx-auto form-container">
+      <div className=" mx-auto form-container">
         <h2 className="text-center">Register as a Volunteer</h2>
         <Form className="form mt-3">
           <Form.Group className="mb-3" controlId="name">
@@ -14,6 +14,9 @@ const Register = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="email">
             <Form.Control type="email" placeholder="Email" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="password">
+            <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="date">
             <Form.Control type="text" placeholder="Date" />

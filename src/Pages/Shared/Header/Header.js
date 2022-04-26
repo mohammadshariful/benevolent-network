@@ -25,9 +25,7 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto d-flex justify-content-center align-items-center">
             <CustomLink to="/">Home</CustomLink>
-            <CustomLink to="/donation">Donation</CustomLink>
-            <CustomLink to="/event">Event</CustomLink>
-            <CustomLink to="/blog">Blog</CustomLink>
+            <CustomLink to="/events">Event</CustomLink>
             <CustomLink to="/login">Login</CustomLink>
             <CustomLink to="/admin">Admin</CustomLink>
           </Nav>

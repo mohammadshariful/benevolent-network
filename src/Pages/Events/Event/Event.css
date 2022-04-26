@@ -1,0 +1,46 @@
+.event-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s ease-out;
+}
+.event-container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.event-img-container {
+  width: 100%;
+  height: 100%;
+}
+.event-img-container img {
+  width: 70%;
+  height: 100%;
+}
+.event-info {
+  position: relative;
+  width: 100%;
+}
+.cancle-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 4px 8px;
+  border: 1px solid #ff7044;
+  background-color: #ff7044;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.cancle-btn:hover {
+  background-color: transparent;
+  color: #ff7044;
+}
+
+@media only screen and (max-width: 576px) {
+  .event-container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,7 @@
+.delete-btn {
+  border: 0;
+  background-color: transparent;
+}
+.delete-btn .delete-icon {
+  color: #ff444a;
+}

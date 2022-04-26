@@ -5,7 +5,7 @@ import SocailLogin from "../Shared/SocailLogin/SocailLogin";
 const Login = () => {
   return (
     <Container className="form-control-area">
-      <div className="w-75 mx-auto form-container">
+      <div className=" mx-auto form-container">
         <h2 className="text-center">Login Benevolent Network</h2>
         <Form className="form mt-3">
           <Form.Group className="mb-3" controlId="email">
