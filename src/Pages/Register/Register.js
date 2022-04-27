@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
@@ -32,6 +33,9 @@ const Register = () => {
     const organize = e.target.organize.value;
     const user = { name, email, password, date, organize };
     await createUserWithEmailAndPassword(email, password);
+    axios.post("http://localhost:5000/user", user).then((data) => {
+      console.log("");
+    });
   };
 
   return (

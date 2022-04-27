@@ -1,23 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
+import useServices from "../../../Hooks/useServices";
 import Loading from "../../Shared/Loading/Loading";
 import SingleSupport from "../SingleSupport/SingleSupport";
 import "./Supports.css";
 const Supports = () => {
-  const [services, setServices] = useState([]);
-  const [isLoading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    fetch("services.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setServices(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        setLoading(false);
-      });
-  }, []);
+  const { services, isLoading } = useServices();
   return (
     <>
       {isLoading ? (
