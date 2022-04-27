@@ -38,7 +38,7 @@ const Header = () => {
               <CustomLink to="/login">LogIn</CustomLink>
             )}
             <CustomLink to="/register">SignUp</CustomLink>
-            <CustomLink to="/admin">Admin</CustomLink>
+            {user && <CustomLink to="/admin">Admin</CustomLink>}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,11 @@
+.notFoundImg-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFoundImg {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}

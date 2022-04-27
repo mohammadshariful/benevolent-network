@@ -10,6 +10,7 @@ import VolunteerList from "./Pages/Admin/VolunteerList/VolunteerList.js";
 import Events from "./Pages/Events/Events/Events";
 import Home from "./Pages/Home/Home/Home";
 import Login from "./Pages/Login/Login";
+import NotFound from "./Pages/NotFound/NotFound.js";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
@@ -67,6 +68,7 @@ function App() {
             }
           />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <ToastContainer />

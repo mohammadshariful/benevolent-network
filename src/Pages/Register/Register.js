@@ -34,7 +34,7 @@ const Register = () => {
     const user = { name, email, password, date, organize };
     await createUserWithEmailAndPassword(email, password);
     axios.post("http://localhost:5000/user", user).then((data) => {
-      console.log("");
+      e.target.reset();
     });
   };
 
