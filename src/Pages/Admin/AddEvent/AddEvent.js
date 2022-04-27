@@ -13,10 +13,12 @@ const AddEvent = () => {
 
     const event = { title, date, description, picture };
     console.log(event);
-    axios.post("http://localhost:5000/event", event).then((data) => {
-      toast.success("Successfully event added");
-      e.target.reset();
-    });
+    axios
+      .post("https://benevolent2022.herokuapp.com/event", event)
+      .then((data) => {
+        toast.success("Successfully event added");
+        e.target.reset();
+      });
   };
   return (
     <div>

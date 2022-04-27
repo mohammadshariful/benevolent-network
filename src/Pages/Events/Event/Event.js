@@ -8,7 +8,7 @@ const Event = ({ event }) => {
   const { _id, title, date, description, picture } = event;
   const { events, setEvents } = useEvents();
   const handeDelete = async (id) => {
-    const url = `http://localhost:5000/event/${id}`;
+    const url = `https://benevolent2022.herokuapp.com/event/${id}`;
     const confrim = window.confirm("Are you sure want to delete?");
 
     if (confrim) {

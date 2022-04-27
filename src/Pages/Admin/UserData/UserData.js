@@ -7,7 +7,7 @@ const UserData = ({ volunter }) => {
   const { volunteers, setVolunteers } = useVolunteers();
   const { name, email, date, _id, organize } = volunter;
   const handeDelete = async (id) => {
-    const url = `http://localhost:5000/user/${id}`;
+    const url = `https://benevolent2022.herokuapp.com/user/${id}`;
     const confrim = window.confirm("Are you sure want to delete?");
 
     if (confrim) {

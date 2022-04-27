@@ -5,7 +5,9 @@ const useVolunteers = () => {
   const [volunteers, setVolunteers] = useState([]);
   useEffect(() => {
     const users = async () => {
-      const { data } = await axios.get("http://localhost:5000/user");
+      const { data } = await axios.get(
+        "https://benevolent2022.herokuapp.com/user"
+      );
       setVolunteers(data);
     };
     users();

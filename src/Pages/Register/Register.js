@@ -33,9 +33,11 @@ const Register = () => {
     const organize = e.target.organize.value;
     const user = { name, email, password, date, organize };
     await createUserWithEmailAndPassword(email, password);
-    axios.post("http://localhost:5000/user", user).then((data) => {
-      e.target.reset();
-    });
+    axios
+      .post("https://benevolent2022.herokuapp.com/user", user)
+      .then((data) => {
+        e.target.reset();
+      });
   };
 
   return (
