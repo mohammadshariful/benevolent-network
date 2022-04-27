@@ -3,3 +3,12 @@
   top: -40px;
   z-index: 10;
 }
+.pagination-container button {
+  padding: 4px 10px;
+  margin: 0 5px;
+  border: 1px solid orange;
+}
+.pagination-container .selected {
+  background-color: orange;
+  color: #fff;
+}
