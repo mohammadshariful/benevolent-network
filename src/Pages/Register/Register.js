@@ -34,9 +34,6 @@ const Register = () => {
     await createUserWithEmailAndPassword(email, password);
   };
 
-  if (error) {
-    console.log(error);
-  }
   return (
     <Container className="form-control-area">
       <TitleChange title="Signup" />
