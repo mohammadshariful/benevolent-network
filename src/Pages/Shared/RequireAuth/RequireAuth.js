@@ -5,13 +5,13 @@ import auth from "../../../Firebase/Firebase.init";
 import VerifyEmail from "../../VerifyEmail/VerifyEmail";
 const RequireAuth = ({ children }) => {
   const [user] = useAuthState(auth);
-
+  console.log(user);
   let location = useLocation();
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  if (user.providerData.providerId === "password" || !user.emailVerified) {
+  if (user.providerData[0]?.providerId === "password" && !user.emailVerified) {
     return <VerifyEmail />;
   }
 
